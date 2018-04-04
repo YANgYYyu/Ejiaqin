@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="E家亲"
+                android:textSize="27sp"
+                android:textColor="#6699FF"
+                android:padding="30dp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_login_id"
+        android:hint="账号"
+        android:maxLength="11"
+        android:padding="10dp"
+        android:numeric="integer"
+
+        tools:ignore="Deprecated"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_login_psd"
+        android:hint="密码"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:password="true"
+        android:numeric="integer"
+
+        tools:ignore="Deprecated"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        >
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/id_login"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:background="#6699ff"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/id_logup"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="注册"
+            android:textColor="#ffffff"
+            android:background="#6699ff"
+            />
+    </LinearLayout>
+</LinearLayout>
