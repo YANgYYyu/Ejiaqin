@@ -41,6 +41,8 @@ public class HomeFragment_3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_3, null);
+        //        为防止重复添加数据，先清除数据
+        foodList.clear();
 //		初始话食谱数据
         initFood();
         FoodAdapter adapter = new FoodAdapter(getActivity(), R.layout.food_item, foodList);

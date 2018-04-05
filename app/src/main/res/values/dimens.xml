@@ -9,7 +9,7 @@
 
 
     <!-- 顶部 导航栏高度 -->
-    <dimen name="topbar_height">70dp</dimen>
+    <dimen name="topbar_height">50dp</dimen>
 
     <!-- 应用边距尺寸 -->
     <!-- 30 ~ 32px -->

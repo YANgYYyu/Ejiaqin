@@ -3,6 +3,7 @@ package com.yijiaqin.ejiaqin.fragement;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.DisplayMetrics;
@@ -104,7 +105,9 @@ public class HomeFragment extends Fragment {
         fragmentsList.add(home3);
         fragmentsList.add(home4);
 
-        mPager.setAdapter(new MyFragmentPagerAdapter(getChildFragmentManager(), fragmentsList));
+        MyFragmentPagerAdapter pagerAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), fragmentsList);
+        mPager.setAdapter(pagerAdapter);
+        mPager.setOffscreenPageLimit(2);
         mPager.setOnPageChangeListener(new MyOnPageChangeListener());
         mPager.setCurrentItem(0);
 
