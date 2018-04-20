@@ -20,7 +20,7 @@ public class food2Activity extends AppCompatActivity {
         //        标题栏的标题和返回键的设置
         TextView titleTV = (TextView) findViewById(R.id.topbar_title_tv);
         titleTV.setText("滋补养胃----营养米糊");
-        Button cancelBtn = (Button) findViewById(R.id.topbar_right_btn);
+        Button cancelBtn = (Button) findViewById(R.id.topbar_left_btn);
         cancelBtn.setText(R.string.main_cancel);
         cancelBtn.setVisibility(View.VISIBLE);
 

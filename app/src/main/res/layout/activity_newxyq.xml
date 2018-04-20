@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yijiaqin.ejiaqin.view.NewxyqActivity">
+
+    <include layout="@layout/comm_topbar_ll" />
+
+    <EditText
+        android:id="@+id/newxyq_et"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ed_bg"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:hint="请在此输入您的心愿"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/newxyq_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="7dp"
+        android:text="还再输入150字" />
+</LinearLayout>

@@ -26,6 +26,6 @@
         android:maxLength="16"
         android:ellipsize="end"
         android:text="@string/title_text"
-        android:textColor="#FFF"
+        android:textColor="@color/white"
         android:textSize="@dimen/topbar_textSize" />
 </RelativeLayout>

@@ -35,12 +35,12 @@ public class HomeFragment_4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_4, null);
-//        为防止重复添加数据，先清除数据
-        hospitalList.clear();
+
 //        初始化医院数据
         initHospital();
         HospitalAdapter adapter = new HospitalAdapter(getActivity(), R.layout.hospital_item, hospitalList);
         ListView listView = (ListView) view.findViewById(R.id.hospital_lv);
+//        todo 加载图片过于卡顿，只能加载一个图片了
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -87,9 +87,4 @@ public class HomeFragment_4 extends Fragment {
         hospitalList.add(hospital5);
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        hospitalList.clear();
-    }
 }

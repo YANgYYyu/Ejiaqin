@@ -110,6 +110,7 @@ public class HomeFragment extends Fragment {
         mPager.setOffscreenPageLimit(2);
         mPager.setOnPageChangeListener(new MyOnPageChangeListener());
         mPager.setCurrentItem(0);
+        tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
 
     }
 
@@ -146,60 +147,37 @@ public class HomeFragment extends Fragment {
 
         @Override
         public void onPageSelected(int arg0) {
+            restTextColor();
             Animation animation = null;
             switch (arg0) {
                 case 0:
-                    if (currIndex == 1) {
+                    if (currIndex == 1) {   //从1滑到0
                         animation = new TranslateAnimation(position_one, offset, 0, 0);
-                     //   tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-                    } else if (currIndex == 2) {
+                        tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                    } else if (currIndex == 2) {    //从1滑到0
                         animation = new TranslateAnimation(position_two, offset, 0, 0);
-                   //     tvTabYangsheng.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-                    } //else if (currIndex == 3) {
-//                        animation = new TranslateAnimation(position_three,offset, 0, 0);
-//                   //     tvTabZhangshang.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    }
-//                  //  tvTabGps.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                        tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                    }
                     break;
                 case 1:
                     if (currIndex == 0) {
                         animation = new TranslateAnimation(offset, position_one, 0, 0);
-                    //    tvTabGps.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                        tvTabYangsheng.setTextColor(resources.getColor(R.color.colorPrimaryDark));
                     } else if (currIndex == 2) {
                         animation = new TranslateAnimation(position_two, position_one, 0, 0);
-                    //    tvTabYangsheng.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-                    } //else if (currIndex == 3) {
-//                        animation = new TranslateAnimation(position_three, position_one, 0, 0);
-//                     //   tvTabZhangshang.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    }
-                   // tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                        tvTabYangsheng.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                    }
                     break;
                 case 2:
                     if (currIndex == 0) {
                         animation = new TranslateAnimation(offset, position_two, 0, 0);
-                     ///   tvTabGps.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                        tvTabZhangshang.setTextColor(resources.getColor(R.color.colorPrimaryDark));
                     } else if (currIndex == 1) {
                         animation = new TranslateAnimation(position_one, position_two, 0, 0);
-                    //    tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-                    } //else if (currIndex == 3) {
-//                        animation = new TranslateAnimation(position_three, position_two, 0, 0);
-//                     //   tvTabZhangshang.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    }
-                   // tvTabYangsheng.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                        tvTabZhangshang.setTextColor(resources.getColor(R.color.colorPrimaryDark));
+                    }
                     break;
-//                case 3:
-//                    if (currIndex == 0) {
-//                        animation = new TranslateAnimation(offset, position_three, 0, 0);
-//                     //   tvTabGps.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    } else if (currIndex == 1) {
-//                        animation = new TranslateAnimation(position_one, position_three, 0, 0);
-//                    //    tvTabTianqi.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    } else if (currIndex == 2) {
-//                        animation = new TranslateAnimation(position_two, position_three, 0, 0);
-//                    //    tvTabYangsheng.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    }
-//                  //  tvTabZhangshang.setTextColor(resources.getColor(R.color.colorPrimaryDark));
-//                    break;
+
             }
             currIndex = arg0;
             if (animation != null) {
@@ -215,6 +193,12 @@ public class HomeFragment extends Fragment {
 
         public void onPageScrollStateChanged(int arg0) {
         }
+    }
+
+    private void restTextColor() {
+        tvTabYangsheng.setTextColor(resources.getColor(R.color.bg_black));
+        tvTabZhangshang.setTextColor(resources.getColor(R.color.bg_black));
+        tvTabTianqi.setTextColor(resources.getColor(R.color.bg_black));
     }
 
 

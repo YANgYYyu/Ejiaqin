@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#58C0D5</color>
+    <color name="colorPrimaryDark">#58C0D5</color>
     <color name="colorAccent">#FF4081</color>
     <!--主题颜色-->
     <color name="top_color">#fd4b4d</color>
@@ -17,5 +17,12 @@
     <!--下划线颜色-->
     <color name="bottomline">#ADD8E6</color>
     <!--下划线上面三个标题的颜色-->
-    <color name="title">#6495ED</color>
+    <color name="title">#58C0D5</color>
+
+    <color name="greyBg">#DCDCDC</color>
+    <color name="greyText">#999999</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="bg_grey">#D6D6D6</color>
+    <color name="bg_black">#222222</color>
 </resources>

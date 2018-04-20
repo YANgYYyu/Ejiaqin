@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +14,7 @@
             android:id="@+id/id_shouye"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/title"
+            android:background="@color/white"
             android:paddingTop="5dp"
             android:gravity="center">
 
@@ -32,6 +33,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:textColor="@color/bg_black"
                 android:text="天气预报"
                 android:textSize="18sp" />
 
@@ -42,6 +44,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="养生食谱"
+                android:textColor="@color/bg_black"
                 android:textSize="18sp" />
 
             <TextView
@@ -50,6 +53,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:textColor="@color/bg_black"
                 android:text="掌上医院"
                 android:textSize="18sp" />
         </LinearLayout>

@@ -4,8 +4,8 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEE"
-    tools:context="com.yijiaqin.ejiaqin.mainView.MainActivity">
+    android:background="@color/white"
+    tools:context="com.yijiaqin.ejiaqin.view.MainActivity">
 
     <!--屏幕正中的部分-->
     <LinearLayout
@@ -53,23 +53,23 @@
 
                 <ImageView
                     android:id="@+id/touxiang_iv"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:src="@drawable/touxiang" />
 
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/user_text"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="请输入您的签名"
-                android:textColor="#404040"
-                android:textSize="11sp" />
+            <!--<EditText-->
+                <!--android:id="@+id/sign_et"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:hint="请输入您的签名"-->
+                <!--android:textColor="#404040"-->
+                <!--android:textSize="11sp" />-->
         </LinearLayout>
 
 

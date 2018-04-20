@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -27,7 +28,7 @@
             android:layout_marginBottom="3dp"
             android:layout_marginTop="2dp"
             android:text="首页资讯"
-            android:textColor="#000000"
+            android:textColor="@color/bg_black"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -54,7 +55,7 @@
             android:layout_marginBottom="3dp"
             android:layout_marginTop="2dp"
             android:text="家"
-            android:textColor="#000000"
+            android:textColor="@color/bg_black"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -82,7 +83,7 @@
             android:layout_marginBottom="3dp"
             android:layout_marginTop="2dp"
             android:text="面对面"
-            android:textColor="#000000"
+            android:textColor="@color/bg_black"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -109,7 +110,7 @@
             android:layout_marginBottom="3dp"
             android:layout_marginTop="2dp"
             android:text="心愿墙"
-            android:textColor="#000000"
+            android:textColor="@color/bg_black"
             android:textSize="12sp" />
     </LinearLayout>
 

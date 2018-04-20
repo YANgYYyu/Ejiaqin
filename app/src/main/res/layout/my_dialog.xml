@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="选择头像"
+            android:textSize="18sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/cursor_color"
+            />
+        <Button
+            android:id="@+id/dialog_camera_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="拍摄头像"
+            android:textSize="16sp"
+            android:background="#DCDCDC"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/cursor_color"
+            />
+        <Button
+            android:id="@+id/dialog_gallery_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="从图库中选择"
+            android:textSize="16sp"
+            android:background="#DCDCDC"/>
+    </LinearLayout>
+

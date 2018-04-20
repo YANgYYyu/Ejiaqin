@@ -1,4 +1,4 @@
-package com.yijiaqin.ejiaqin.mainView;
+package com.yijiaqin.ejiaqin.view;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -17,18 +17,15 @@ import android.widget.Toast;
 
 import com.yijiaqin.ejiaqin.R;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 /**
  * 作者：平塔岛象龟
- *
+ * <p>
  * 邮箱：454941261@qq.com
- *
+ * <p>
  * 创建日期：2018/4/2
- *
+ * <p>
  * 文件描述:登陆界面
- *
+ * <p>
  * 备注:
  */
 
@@ -63,15 +60,11 @@ public class LogInActivity extends AppCompatActivity {
                 if (name.trim().equals(savedUsername) && pass.trim().equals(savedPassword)) {
                     Toast.makeText(LogInActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
                     //切换界面
-                    new Timer().schedule(new TimerTask() {
-                        public void run() {
-                            startActivity(new Intent(LogInActivity.this, MainActivity.class));
-                            finish();
-                        }
-                    }, 0500);
+                    startActivity(new Intent(LogInActivity.this, MainActivity.class));
+                    finish();
                 } else {
                     //账号密码错误
-                    Toast.makeText(LogInActivity.this, "账号密码错误，请确认后再次尝试登陆", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivity.this, "账号或者密码错误，请确认后再次尝试登陆", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -94,7 +87,7 @@ public class LogInActivity extends AppCompatActivity {
         edit.commit();   //提交信息
     }
 
-//    自定义监听器
+    //    自定义监听器
     private class LogUpLinstenerimp implements OnClickListener {
         public void onClick(View v) {
             //注册两个字符串常量，并获取对应的信息

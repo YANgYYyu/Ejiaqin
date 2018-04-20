@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/first_background"
-    tools:context="com.yijiaqin.ejiaqin.mainView.FirstBackGround_Activity">
+    tools:context="com.yijiaqin.ejiaqin.view.FirstBackGround_Activity">
 
 </RelativeLayout>

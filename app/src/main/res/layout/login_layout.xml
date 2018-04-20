@@ -3,78 +3,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/login_background">
+    android:background="@drawable/login_background"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
         android:layout_marginTop="20dp"
-        >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="E家亲"
-                android:textSize="27sp"
-                android:textColor="#6699FF"
-                android:padding="30dp" />
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        android:text="E家亲"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
 
-    </LinearLayout>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/id_login_id"
-        android:hint="账号"
-        android:maxLength="11"
-        android:padding="10dp"
-        android:numeric="integer"
-
-        tools:ignore="Deprecated"
-        />
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/id_login_psd"
-        android:hint="密码"
-        android:maxLength="20"
-        android:padding="10dp"
-        android:password="true"
-        android:numeric="integer"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ed_bg"
+        android:drawableLeft="@drawable/login_user"
+        android:drawablePadding="5dp"
+        android:hint="请输入您的账号"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="10dp" />
 
-        tools:ignore="Deprecated"
-        />
+
+    <EditText
+        android:id="@+id/id_login_psd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ed_bg"
+        android:drawableLeft="@drawable/login_psd"
+        android:drawablePadding="5dp"
+        android:hint="请输入您的密码"
+        android:inputType="textPassword"
+        android:maxLength="11"
+        android:padding="10dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_margin="30dp"
-        >
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
             android:id="@+id/id_login"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="登录"
-            android:textColor="#ffffff"
-            android:background="#6699ff"
-            />
-        <Button
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:id="@+id/id_logup"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:text="登录"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/id_logup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
+            android:gravity="center"
             android:text="注册"
-            android:textColor="#ffffff"
-            android:background="#6699ff"
-            />
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>
