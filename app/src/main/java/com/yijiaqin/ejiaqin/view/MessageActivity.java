@@ -19,6 +19,8 @@ import com.yijiaqin.ejiaqin.adapter.MsgAdapter;
 import com.yijiaqin.ejiaqin.entity.Msg;
 import com.yijiaqin.ejiaqin.util.TimeUtil;
 
+import org.litepal.crud.DataSupport;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +41,7 @@ public class MessageActivity extends AppCompatActivity {
     private Button send;
     private RecyclerView msgRecyclerView;
     private MsgAdapter adapter;
+    private int num;    //第几个联系人的序号
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +63,19 @@ public class MessageActivity extends AppCompatActivity {
             }
         });
 
-//        初始化数据，获取传过来的值
-        msgList.add(new Msg(intent.getExtras().getInt("iv"), intent.getStringExtra("content"),
-                intent.getStringExtra("time"), intent.getStringExtra("name"), Msg.TYPE_RECEIVER));
+
 //      拿到控件
         inputText = (EditText) findViewById(R.id.input_text);
         send = (Button) findViewById(R.id.send);
         msgRecyclerView = (RecyclerView) findViewById(R.id.msg_recycler_view);
+
+
+        //        初始化数据，获取传过来的值
+        msgList.add(new Msg(intent.getExtras().getInt("iv"), intent.getStringExtra("content"),
+                intent.getStringExtra("time"), intent.getStringExtra("name"), Msg.TYPE_RECEIVER));
+        num = intent.getExtras().getInt("num");
+//        查询数据
+        msgList.addAll(DataSupport.where("num = ?", String.valueOf(num)).find(Msg.class));
 //        初始化适配器
         adapter = new MsgAdapter(msgList);
 
@@ -79,7 +88,10 @@ public class MessageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String content = inputText.getText().toString();
                 if (!"".equals(content)) {
-                    Msg msg = new Msg(R.drawable.laoren, content, TimeUtil.getTime(0), "测试用户", Msg.TYPE_SEND);
+                    Msg msg = new Msg(R.drawable.touxiang, content, TimeUtil.getTime(0), "测试用户", Msg.TYPE_SEND);
+                    msg.setNum(num);
+//                    保存数据
+                    msg.save();
                     msgList.add(msg);
                     adapter.notifyItemInserted(msgList.size() - 1);
                     msgRecyclerView.scrollToPosition(msgList.size() - 1);

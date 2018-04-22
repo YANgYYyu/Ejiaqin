@@ -86,7 +86,6 @@ public class JiaFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long arg3) {
                 //position为当前省级选中的值的序号
-
                 //将地级适配器的值改变为city[position]中的值
                 cityAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, city[position]);
                 // 设置二级下拉列表的选项内容适配器
@@ -107,7 +106,6 @@ public class JiaFragment extends Fragment {
                 if(proviceID == 0) {
                     switch (i) {
                         case 0:
-
                             adapter = new JiaAdapter(getActivity(), R.layout.jia_item, hefei);
                             jiaLv.setAdapter(adapter);
                             adapter.notifyDataSetChanged();

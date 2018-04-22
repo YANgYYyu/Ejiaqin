@@ -98,8 +98,6 @@ public class NewxyqActivity extends AppCompatActivity {
                     xinyuanqiang.setContent(contentEt.getText().toString());
                     xinyuanqiang.setTime(TimeUtil.getTime(0));
                     xinyuanqiang.save();
-//                    设置resultCode
-                    setResult(2);
                     backAction();
                 } else {
                     backAction();

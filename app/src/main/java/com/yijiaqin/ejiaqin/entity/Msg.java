@@ -1,5 +1,7 @@
 package com.yijiaqin.ejiaqin.entity;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * 作者：平塔岛象龟
  *
@@ -12,7 +14,7 @@ package com.yijiaqin.ejiaqin.entity;
  * 备注:
  */
 
-public class Msg {
+public class Msg extends DataSupport{
     public static final int TYPE_RECEIVER = 0;
     public static final int TYPE_SEND = 1;
     private int imageView;
@@ -20,6 +22,26 @@ public class Msg {
     private String time;
     private String name;
     private int type;   //消息的类型，可选的值即为上面的两个常量
+    private int num;    //第几个联系人，供查询
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+
+    public Msg(int imageView, String content, String time, String name, int type, int num) {
+        this.imageView = imageView;
+        this.content = content;
+        this.time = time;
+        this.name = name;
+        this.type = type;
+        this.num = num;
+    }
+
 
     public Msg( int imageView, String content, String time, String name, int type) {
         this.imageView = imageView;

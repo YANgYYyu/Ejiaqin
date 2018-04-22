@@ -131,7 +131,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         actionbar_img = (ImageView) findViewById(R.id.actionbar_img);
 
         touxiang_iv = (ImageView) findViewById(R.id.touxiang_iv);
-        //      拿到SharedPreferences里保存的图片数据，进行解码
+        //      拿到SharedPreferences里保存的图片数据，进行解码    todo 无法读取图片
         String pic = (String) CacheUtils.getString(MainActivity.this, CacheUtils.PIC_URI);
         if (pic != null) {
             byte[] bytes = android.util.Base64.decode(pic.getBytes(), 1);
@@ -308,25 +308,21 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 return;
             }
             Uri uri = data.getData();
-
-
-                 InputStream inputStream = null;
-                try {
-                    inputStream = getContentResolver().openInputStream(uri);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            InputStream inputStream = null;
+            try {
+                inputStream = getContentResolver().openInputStream(uri);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             touxiang_iv.setImageBitmap(bitmap);
-
 //                Uri fileUri = convertUri(uri);
 //                startImageZoom(fileUri);
-
         } else if (requestCode == CROP_REQUEST_CODE) {
             if (data == null) {
                 return;
