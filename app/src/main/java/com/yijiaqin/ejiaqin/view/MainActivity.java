@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.yijiaqin.ejiaqin.R;
+import com.yijiaqin.ejiaqin.drawView.PersonInfoActivity;
 import com.yijiaqin.ejiaqin.util.CacheUtils;
 import com.yijiaqin.ejiaqin.util.DateUtil;
 
@@ -75,6 +76,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private static final int GALLERY_REQUEST_CODE = 2;  //相册
     private static final int CROP_REQUEST_CODE = 3;     //裁剪页
 
+    private int i = 0;    //点击侧边栏的小头像弹出侧边栏时，根据i来切换对应底部栏的图片
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,7 +108,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         actionbar_img.setOnClickListener(this);
 //        侧滑栏里面的头像
         touxiang_iv.setOnClickListener(this);
-//        sign_et.setOnClickListener(this);
 //        侧滑栏里的点击item
         btn_left1.setOnClickListener(this);
         btn_left2.setOnClickListener(this);
@@ -137,7 +139,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             byte[] bytes = android.util.Base64.decode(pic.getBytes(), 1);
             touxiang_iv.setImageBitmap(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
         }
-//        sign_et = (EditText) findViewById(R.id.sign_et);
 
         btn_left1 = (Button) findViewById(R.id.btn_left1);
         btn_left2 = (Button) findViewById(R.id.btn_left2);
@@ -163,25 +164,25 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case 0:
                 Fragment homeFragment = new com.yijiaqin.ejiaqin.fragement.HomeFragment();
                 transaction.replace(R.id.id_content, homeFragment);
-                mImgShouye.setImageResource(R.drawable.shouye_pressed);
+                mImgShouye.setImageResource(R.mipmap.shouye_pressed);
                 transaction.commit();
                 break;
             case 1:
                 Fragment jiaFragment = new com.yijiaqin.ejiaqin.fragement.JiaFragment();
                 transaction.replace(R.id.id_content, jiaFragment);
-                mImgJia.setImageResource(R.drawable.jia_pressed);
+                mImgJia.setImageResource(R.mipmap.jia_pressed);
                 transaction.commit();
                 break;
             case 2:
                 Fragment mianduimianFragment = new com.yijiaqin.ejiaqin.fragement.MianDuiMianFragment();
                 transaction.replace(R.id.id_content, mianduimianFragment);
-                mImgMianduimian.setImageResource(R.drawable.mianduimian_pressed);
+                mImgMianduimian.setImageResource(R.mipmap.mianduimian_pressed);
                 transaction.commit();
                 break;
             case 3:
                 Fragment xinyuanqiangFragment = new com.yijiaqin.ejiaqin.fragement.XinYuanQiangFragment();
                 transaction.replace(R.id.id_content, xinyuanqiangFragment);
-                mImgXinyuanqiang.setImageResource(R.drawable.xinyuanqiang_pressed);
+                mImgXinyuanqiang.setImageResource(R.mipmap.xinyuanqiang_pressed);
                 transaction.commit();
                 break;
             default:
@@ -221,19 +222,36 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.id_tab_shouye:
                 setSelect(0);
+                i = 0;
                 break;
             case R.id.id_tab_jia:
                 setSelect(1);
+                i = 1;
                 break;
             case R.id.id_tab_mianduimian:
                 setSelect(2);
+                i = 2;
                 break;
             case R.id.id_tab_xinyuanqiang:
                 setSelect(3);
+                i = 3;
                 break;
             case R.id.actionbar_img:
                 drawerLayout.openDrawer(Gravity.START);
-                mImgShouye.setImageResource(R.drawable.shouye_pressed);
+                switch (i) {
+                    case 0:
+                        mImgShouye.setImageResource(R.mipmap.shouye_pressed);
+                        break;
+                    case 1:
+                        mImgJia.setImageResource(R.mipmap.jia_pressed);
+                        break;
+                    case 2:
+                        mImgMianduimian.setImageResource(R.mipmap.mianduimian_pressed);
+                        break;
+                    case 3:
+                        mImgXinyuanqiang.setImageResource(R.mipmap.xinyuanqiang_pressed);
+                        break;
+                }
                 break;
             case R.id.touxiang_iv:
                 touxiang_iv.setOnClickListener(new View.OnClickListener() {
@@ -267,25 +285,30 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                         });
                     }
                 });
-
-
                 break;
-//            case R.id.sign_et:
-//                break;
+            case R.id.btn_left1:
+                startActivity(new Intent(MainActivity.this, PersonInfoActivity.class));
+                break;
             default:
                 break;
 
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setSelect(i);
+    }
+
     /**
-     * 切换图片至暗色
+     * 切换图片正常颜色
      */
     private void resetImgs() {
-        mImgShouye.setImageResource(R.drawable.shouye);
-        mImgJia.setImageResource(R.drawable.jia);
-        mImgMianduimian.setImageResource(R.drawable.mianduimian);
-        mImgXinyuanqiang.setImageResource(R.drawable.xinyuanqiang);
+        mImgShouye.setImageResource(R.mipmap.shouye_normal);
+        mImgJia.setImageResource(R.mipmap.jia_normal);
+        mImgMianduimian.setImageResource(R.mipmap.mianduimian_normal);
+        mImgXinyuanqiang.setImageResource(R.mipmap.xinyuanqiang_normal);
     }
 
     @Override

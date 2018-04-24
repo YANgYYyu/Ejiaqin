@@ -3,20 +3,20 @@
     package="com.yijiaqin.ejiaqin">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
-
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:launchMode="singleTask"
             android:name=".view.FirstBackGround_Activity"
             android:label="@string/app_name"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,8 @@
         <activity android:name=".foodsDetail.food6Activity" />
         <activity android:name=".foodsDetail.food7Activity" />
         <activity android:name=".view.MessageActivity" />
-        <activity android:name=".view.NewxyqActivity"></activity>
+        <activity android:name=".view.NewxyqActivity" />
+        <activity android:name=".drawView.PersonInfoActivity"></activity>
     </application>
 
 </manifest>

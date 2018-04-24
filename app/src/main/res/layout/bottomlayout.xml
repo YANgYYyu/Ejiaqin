@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
+    android:background="@color/bottom"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -16,20 +16,21 @@
         <ImageButton
             android:id="@+id/id_tab_shouye_img"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:background="#00000000"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/bottom"
             android:clickable="false"
-            android:src="@drawable/shouye_pressed" />
+            android:src="@mipmap/shouye_pressed" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginTop="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
             android:text="首页资讯"
-            android:textColor="@color/bg_black"
-            android:textSize="12sp" />
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,20 +44,21 @@
         <ImageButton
             android:id="@+id/id_tab_jia_img"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:background="#00000000"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/bottom"
             android:clickable="false"
-            android:src="@drawable/jia" />
+            android:src="@mipmap/jia_normal" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginTop="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
             android:text="家"
-            android:textColor="@color/bg_black"
-            android:textSize="12sp" />
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
     </LinearLayout>
 
 
@@ -71,20 +73,20 @@
         <ImageButton
             android:id="@+id/id_tab_mianduimian_img"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:background="#00000000"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/bottom"
             android:clickable="false"
-            android:src="@drawable/mianduimian" />
+            android:src="@mipmap/mianduimian_normal" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginTop="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
             android:text="面对面"
-            android:textColor="@color/bg_black"
-            android:textSize="12sp" />
+            android:textColor="@color/white"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -98,20 +100,20 @@
         <ImageButton
             android:id="@+id/id_tab_xinyuanqiang_img"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:background="#00000000"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/bottom"
             android:clickable="false"
-            android:src="@drawable/xinyuanqiang" />
+            android:src="@mipmap/xinyuanqiang_normal" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginTop="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
             android:text="心愿墙"
-            android:textColor="@color/bg_black"
-            android:textSize="12sp" />
+            android:textColor="@color/white"
+            android:textSize="10sp" />
     </LinearLayout>
 
 </LinearLayout>
