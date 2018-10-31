@@ -6,6 +6,7 @@ import android.widget.ImageView;
 /**
  * Created by 平塔岛象龟
  * 2018/4/5.
+ * 医院
  */
 
 public class Hospital {

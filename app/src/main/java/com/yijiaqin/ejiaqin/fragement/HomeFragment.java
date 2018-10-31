@@ -33,6 +33,7 @@ import java.util.ArrayList;
  *
  * 备注:
  */
+
 public class HomeFragment extends Fragment {
 
     Resources resources;

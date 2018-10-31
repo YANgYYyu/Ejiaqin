@@ -48,6 +48,9 @@ import java.io.InputStream;
  * <p>
  * 备注:里面嵌套了4个fragment，第一个fragment里又嵌套了3个fragment
  */
+
+
+// TODO: 2018/9/18 换成github上的开源库
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
     private LinearLayout mTabShouye;
@@ -321,7 +324,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 if (extras != null) {
                     Bitmap bitmap = extras.getParcelable("data");
                     touxiang_iv.setImageBitmap(bitmap);
-//                    todo 裁剪图片有问题
+//                    todo 裁剪图片有问题，要添加这个
 //                    Uri uri = saveBitmap(bitmap);
 //                    startImageZoom(uri);
                 }
